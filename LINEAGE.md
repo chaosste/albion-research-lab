@@ -11,8 +11,9 @@ Albion Research Lab is a standalone orchestration repo derived from the OMX/auto
 
 ## OMX dependency
 
-- Submodule: [chaosste/oh-my-codex](https://github.com/chaosste/oh-my-codex) pinned to the local checkout at `/Users/stephenbeale/Projects/oh-my-codex`
+- Submodule: [chaosste/oh-my-codex](https://github.com/chaosste/oh-my-codex) pinned at **v0.15.3** (`26c11844`)
 - Upstream OMX: [Yeachan-Heo/oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex)
+- Run **`./omx` only** in this repo (not global `omx` from PATH)
 
 ## What moved here
 

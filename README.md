@@ -52,6 +52,8 @@ uv run python -m unittest discover -s tests -p 'test_*.py' -q
 
 ## OMX launcher
 
+**Always use `./omx`** from the repo root. Do not use a global `omx` install — this repo pins oh-my-codex **v0.15.3** and global installs are typically newer with incompatible setup checks.
+
 ```bash
 ./omx doctor
 ./omx setup --scope project --verbose

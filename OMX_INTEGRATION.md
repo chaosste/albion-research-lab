@@ -1,8 +1,19 @@
 # oh-my-codex integration
 
-This repo vendors [oh-my-codex](https://github.com/chaosste/oh-my-codex) as a git submodule at `./oh-my-codex`.
+This repo vendors [oh-my-codex](https://github.com/chaosste/oh-my-codex) v**0.15.3** as a git submodule at `./oh-my-codex` (commit `26c11844`).
 
-The submodule is pinned to the same commit as the local checkout at `/Users/stephenbeale/Projects/oh-my-codex`.
+## Use `./omx` only
+
+Always run OMX through the repo-local launcher from the repository root:
+
+```bash
+./omx doctor
+./omx setup --scope project --force --verbose
+```
+
+Do **not** use a globally installed `omx` (for example via `npm install -g` or nvm) in this repo. A newer global install (v0.18+) applies different setup checks and config defaults than the pinned v0.15.3 submodule, which causes misleading doctor warnings.
+
+The wrapper resolves to `node ./oh-my-codex/dist/cli/omx.js`.
 
 Project-local OMX surfaces live at:
 
@@ -54,5 +65,7 @@ git commit -m "Pin oh-my-codex submodule to <commit-or-tag>"
 Then rerun project setup if needed:
 
 ```bash
-./omx setup --scope project --force --verbose
+./omx setup --scope project --verbose
 ```
+
+Avoid `./omx setup --force` unless repairing hooks or config — it refreshes catalog-managed prompts, skills, and native agents and can overwrite Albion-specific customizations under `.codex/`.
