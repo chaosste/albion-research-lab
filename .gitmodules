@@ -1,0 +1,3 @@
+[submodule "oh-my-codex"]
+	path = oh-my-codex
+	url = https://github.com/chaosste/oh-my-codex.git

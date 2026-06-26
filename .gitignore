@@ -1,0 +1,39 @@
+# Python
+.venv/
+__pycache__/
+*.py[oc]
+.ruff_cache/
+build/
+dist/
+wheels/
+*.egg-info
+
+# OMX runtime (never commit)
+.omx/
+.omc/
+
+# Generated / cache
+graphify-out/
+results/
+queue/
+worktrees/
+
+# macOS
+.DS_Store
+
+# Session-generated agent files
+CLAUDE.md
+AGENTS.md
+
+# Experimental code/artifacts
+dev/
+
+# Project-local Codex runtime (agents/skills/prompts are tracked)
+.codex/*
+!.codex/agents/
+!.codex/agents/**
+!.codex/skills/
+!.codex/skills/**
+.codex/skills/.system/**
+!.codex/prompts/
+!.codex/prompts/**
